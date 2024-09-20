@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 360px;
+            height: 640px; /* 9:16 aspect ratio */
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .left-panel {
+            width: 35%;
+            background-color: #000;
+            border-right: 2px solid #1e1e1e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .left-panel img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .left-panel button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #1e1e1e;
+            border: 2px solid #00d4ff;
+            border-radius: 5px;
+            color: #00d4ff;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .right-panel {
+            width: 65%;
+            padding: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1e1e1e;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .menu-item span {
+            font-size: 14px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #00d4ff;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+
+        .speed-control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .speed-slider {
+            width: 100%;
+            margin-left: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .footer .status {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <button>MAIN</button>
+        </div>
+        <div class="right-panel">
+            <div class="menu-item">
+                <span>AIMLOCK</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>AIMBOT</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>REGEDIT PLUS V2</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>SENSIVITY</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>FIX ALL VIP</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>FAKE AIM</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>SHOTBOT</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>BYPASS ANTIBAND</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <span>AIMBOT FIX</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="speed-control">
+                <span>HEADSHOT RANGE</span>
+                <input type="range" min="0" max="10" value="0" class="speed-slider">
+            </div>
+            <div class="menu-item">
+                <span>FIX BAN IOS</span>
+                <div>
+                    <button class="apply-btn" style="background-color:#00d4ff; border:none; padding: 5px 10px; cursor:pointer;">ON</button>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Status: <span class="status">ON</span></p>
+                <p>DEVICE : IOS/p>
+                <p>VERSION : 1.0</p>
+                <p>Installed PANEL : YES</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
